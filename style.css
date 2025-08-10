@@ -1,0 +1,41 @@
+*{
+    background-color: black;
+}
+
+.jardim {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 50px);
+    grid-template-rows: repeat(12, 50px);
+    gap: 2px;
+    background-color:lightgreen;
+}
+
+/*Tipos de canteiro*/
+
+.vazio {
+    width: 50px;
+    height: 50px;
+    background-color:sienna;
+    background-size: cover;
+}
+
+.pedra{
+
+}
+
+.erva{
+
+}
+
+.planta1{
+
+}
+
+.planta2{
+
+}
+
+.planta3{
+
+}
