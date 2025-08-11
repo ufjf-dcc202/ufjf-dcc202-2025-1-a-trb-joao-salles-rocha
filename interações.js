@@ -1,25 +1,18 @@
-let corte = 0 ;
-let quebra = 0;
-let semente = 0;
-
-function removerTodos(){
-    corte = 0;
-    quebra = 0;
-    semente = 0;
-}
-
 export function escolherCorte(){
-    removerTodos();
-    corte = 1;
-    div1.style.color = 'red';
+    const canteiroEscolhido = document.getElementById("canteiro_0");
+    canteiroEscolhido.removeAttribute("class");
+    canteiroEscolhido.classList.add('vazio');
 }
 
 export function escolherQuebra(){
-    removerTodos();
-    quebra = 1;
+    const canteiroEscolhido = document.getElementById("canteiro_0");
+    canteiroEscolhido.removeAttribute("class");
+    canteiroEscolhido.classList.add('pedra');
 }
 
 export function escolherSemente(){
-    removerTodos();
-    semente = 1;
+    const canteiroEscolhido = document.getElementById("canteiro_0");
+    canteiroEscolhido.removeAttribute("class");
+    canteiroEscolhido.classList.add('erva');
+    
 }
