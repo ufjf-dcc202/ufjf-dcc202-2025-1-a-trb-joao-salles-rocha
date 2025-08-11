@@ -1,22 +1,14 @@
-const grid = document.querySelector('.jardim');
+//Imports
+import { criarJardim } from "./criaJardim.js";
+import { escolherCorte, escolherQuebra, escolherSemente } from "./interações.js";
 
-        for (let i = 0; i < 12 * 12; i++) {
-            let j = Math.floor(Math.random() * 30)
-            if (j<22){
-                const cell = document.createElement('div');
-                cell.className = 'vazio';
-                grid.appendChild(cell);
-            }else{
-                if (j<26){
-                    const cell = document.createElement('div');
-                    cell.className = 'erva';
-                    grid.appendChild(cell);
-                }else{
-                    if (j<30){
-                        const cell = document.createElement('div');
-                        cell.className = 'pedra';
-                        grid.appendChild(cell);
-                    }
-                }
-            }
-        }
+const btnCortar = document.querySelector("#cortar");
+const btnQuebrar = document.querySelector("#quebrar");
+const btnPlantar = document.querySelector("#plantar");
+
+criarJardim();
+
+//Botões
+btnCortar.addEventListener("click", escolherCorte);
+btnQuebrar.addEventListener("click", escolherQuebra);
+btnPlantar.addEventListener("click", escolherSemente); 
