@@ -1,14 +1,16 @@
 //Imports
 import { criarJardim } from "./criaJardim.js";
-import { escolherCorte, escolherQuebra, escolherSemente } from "./interações.js";
+import { escolherEnxada, escolherTesoura, escolherPicareta, escolherSemente } from "./interações.js";
 
-const btnCortar = document.querySelector("#cortar");
+const btnPreparar = document.querySelector("#preparar");
+const btnCortar = document.querySelector("#podar");
 const btnQuebrar = document.querySelector("#quebrar");
 const btnPlantar = document.querySelector("#plantar");
 
 criarJardim();
 
 //Botões
-btnCortar.addEventListener("click", escolherCorte);
-btnQuebrar.addEventListener("click", escolherQuebra);
+btnPreparar.addEventListener("click", escolherEnxada);
+btnCortar.addEventListener("click", escolherTesoura);
+btnQuebrar.addEventListener("click", escolherPicareta);
 btnPlantar.addEventListener("click", escolherSemente); 

@@ -1,10 +1,16 @@
-export function escolherCorte(){
+export function escolherEnxada(){
+    const canteiroEscolhido = document.getElementById("canteiro_0");
+    canteiroEscolhido.removeAttribute("class");
+    canteiroEscolhido.classList.add('preparado');
+}
+
+export function escolherTesoura(){
     const canteiroEscolhido = document.getElementById("canteiro_0");
     canteiroEscolhido.removeAttribute("class");
     canteiroEscolhido.classList.add('vazio');
 }
 
-export function escolherQuebra(){
+export function escolherPicareta(){
     const canteiroEscolhido = document.getElementById("canteiro_0");
     canteiroEscolhido.removeAttribute("class");
     canteiroEscolhido.classList.add('pedra');
@@ -14,5 +20,4 @@ export function escolherSemente(){
     const canteiroEscolhido = document.getElementById("canteiro_0");
     canteiroEscolhido.removeAttribute("class");
     canteiroEscolhido.classList.add('erva');
-    
 }
