@@ -1,5 +1,7 @@
 *{
-    background-color: black;
+    background-image: url("imagens/bg.png");
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
 .jardim {
@@ -13,6 +15,7 @@
     grid-template-rows: repeat(12, 50px);
     gap: 2px;
     background-color:saddlebrown;
+    background-image: none;
 }
 
 /* Tipos de canteiro */
@@ -69,21 +72,52 @@
 
 /* Botão */
 
-button{
+.enxada{
     width: 80px;
-    height: 25px;
-    background-color: darkgrey;
-    background-size: cover;
+    height: 80px;
+    background-image: url("imagens/enxada.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+.regador{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/regador.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+.foice{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/foice.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+.picareta{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/picareta.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.semente{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/cenoura_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 .botão{
     display: flex;
     margin:auto;
     justify-content: center;
     align-items: center;
+    background-image: none;
 }
 .ativo{
     width: 80px;
-    height: 25px;
-    background-color:cornflowerblue;
-    background-size: cover;
+    height: 80px;
+    border: solid;
+    border-color: brown;
 }

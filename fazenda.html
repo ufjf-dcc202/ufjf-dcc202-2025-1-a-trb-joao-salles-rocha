@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao jardim!</title>
+    <title>Bem-vindo!!</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" type="module"></script>
 </head>
 <body>
     <div class="jardim"></div> <!-- Cria o espaço para as células iniciais-->
-    <section class ="botão">
-        <button data-ferramenta="enxada" id="preparar">Enxada</button>
-        <button data-ferramenta="regador" id="regar">Regador</button>
-        <button data-ferramenta="tesoura" id="podar">Tesoura</button>
-        <button data-ferramenta="picareta" id="quebrar">Picareta</button>
-        <button data-ferramenta="semente" id="plantar">Semente</button>
+    <section class="botão">
+        <button class="ativo enxada" data-ferramenta="enxada" id="preparar"></button>
+        <button class = "regador" data-ferramenta="regador" id="regar"></button>
+        <button class = "foice" data-ferramenta="tesoura" id="podar"></button>
+        <button class = "picareta" data-ferramenta="picareta" id="quebrar"></button>
+        <button class = "semente" data-ferramenta="semente" id="plantar"></button>
     </section>
+    <section class="sons">
+        <audio id="plantando" src="sons/plantando.mp3" preload="auto"></audio>
+    </section>
+    
 </body>
 </html>
