@@ -75,7 +75,13 @@ button{
     background-color: darkgrey;
     background-size: cover;
 }
-.selecionado{
+.botão{
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+}
+.ativo{
     width: 80px;
     height: 25px;
     background-color:cornflowerblue;
