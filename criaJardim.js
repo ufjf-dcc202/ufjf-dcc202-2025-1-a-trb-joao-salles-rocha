@@ -15,11 +15,18 @@ export function criarJardim(){
                 cell.id = "canteiro_"+i;
                 grid.appendChild(cell);
             }else{
-                if (j<30){
+                if (j<28){
                     const cell = document.createElement('div');
-                    cell.className = 'pedra';
+                    cell.className = 'pedra_1';
                     cell.id = "canteiro_"+i;
                     grid.appendChild(cell);
+                }else{
+                    if (j<30){
+                        const cell = document.createElement('div');
+                        cell.className = 'pedra_2';
+                        cell.id = "canteiro_"+i;
+                        grid.appendChild(cell);
+                }
                 }
             }
         }

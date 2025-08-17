@@ -11,58 +11,60 @@
     background-color:lightgreen;
 }
 
-/*Tipos de canteiro*/
+/* Tipos de canteiro */
 
 .vazio {
     width: 50px;
     height: 50px;
-    background-color:sienna;
-    background-size: cover;
+    background-image: url("imagens/terra_0.png");
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
 .preparado{
     width: 50px;
     height: 50px;
-    background-color:saddlebrown;
-    background-size: cover; 
+    background-image: url("imagens/terra_1.png");
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
-.pedra{
+.regado{
     width: 50px;
     height: 50px;
-    background-color:gray;
-    background-size: cover;
+    background-image: url("imagens/terra_2.png");
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.pedra_1{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/pedra_1.png"), url("imagens/terra_0.png");
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.pedra_2{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/pedra_2.png"), url("imagens/terra_0.png");
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
 .erva{
     width: 50px;
     height: 50px;
-    background-color:darkolivegreen;
-    background-size: cover;
+    background-image: url("imagens/erva.png"), url("imagens/terra_0.png");
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
-.planta1{
-    width: 50px;
-    height: 50px;
-    background-color:red;
-    background-size: cover;
-}
-
-.planta2{
-    width: 50px;
-    height: 50px;
-    background-color:greenyellow;
-    background-size: cover;
-}
-
-.planta3{
-    width: 50px;
-    height: 50px;
-    background-color:blue;
-    background-size: cover;
-}
+/* Tipos de semente */
 
 /* Botão */
+
 button{
     width: 80px;
     height: 25px;
