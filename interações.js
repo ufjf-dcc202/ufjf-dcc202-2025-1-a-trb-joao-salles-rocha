@@ -25,6 +25,10 @@ export function escolherFerramenta(id){
     tocarSom("trocarItem");
 }
 
+export function usarFerramenta(num){
+    console.log(num);
+}
+
 //Interações extras
 export function passarTempo(){
 

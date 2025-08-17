@@ -1,34 +1,22 @@
+import { usarFerramenta } from "./interações.js";
+
 const grid = document.querySelector('.jardim');
 
 export function criarJardim(){
-    for (let i = 0; i < 12 * 12; i++) {
-        let j = Math.floor(Math.random() * 30)
-        if (j<22){
-            const cell = document.createElement('div');
+    for (let i = 0; i < 144; i++) {
+        let j = Math.floor(Math.random() * 30);
+        const cell = document.createElement('div');
+        cell.id = "canteiro_" + i;
+        cell.addEventListener("click", () => usarFerramenta(i));
+        if (j < 22) {
             cell.className = 'vazio';
-            cell.id = "canteiro_"+i;
-            grid.appendChild(cell);
-        }else{
-            if (j<26){
-                const cell = document.createElement('div');
-                cell.className = 'erva';
-                cell.id = "canteiro_"+i;
-                grid.appendChild(cell);
-            }else{
-                if (j<28){
-                    const cell = document.createElement('div');
-                    cell.className = 'pedra_1';
-                    cell.id = "canteiro_"+i;
-                    grid.appendChild(cell);
-                }else{
-                    if (j<30){
-                        const cell = document.createElement('div');
-                        cell.className = 'pedra_2';
-                        cell.id = "canteiro_"+i;
-                        grid.appendChild(cell);
-                }
-                }
-            }
+        } else if (j < 26) {
+            cell.className = 'erva';
+        } else if (j < 28) {
+            cell.className = 'pedra_1';
+        } else {
+            cell.className = 'pedra_2';
         }
+        grid.appendChild(cell);
     }
 }
