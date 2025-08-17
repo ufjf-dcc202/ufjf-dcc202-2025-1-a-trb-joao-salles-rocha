@@ -1,3 +1,6 @@
+import { tocarSom, pararSom } from "./audio.js";
+let ferramenta = "preparar";
+
 //Interações com o solo
 function limpaAtivos(){
     const enxada = document.getElementById("preparar");
@@ -11,15 +14,18 @@ function limpaAtivos(){
     picareta.classList.remove('ativo');
     semente.classList.remove('ativo');
 }
-
+function trocarFerramenta(id){
+    ferramenta = id;
+}
 export function escolherFerramenta(id){
-    const ferramenta = document.getElementById(id);
+    const opção = document.getElementById(id);
     limpaAtivos();
-    ferramenta.classList.add('ativo');
+    opção.classList.add('ativo');
+    trocarFerramenta(id);
+    tocarSom("trocarItem");
 }
 
 //Interações extras
-
 export function passarTempo(){
 
 }
