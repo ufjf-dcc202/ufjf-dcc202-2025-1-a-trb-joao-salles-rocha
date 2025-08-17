@@ -53,6 +53,7 @@ export function usarFerramenta(num){
             if (canteiro.classList.contains('erva')){
                 canteiro.classList.remove('erva');
                 canteiro.classList.add('vazio');
+                tocarSom("cortando");
                 console.log("Erva podada.");
             }else
                 console.log("Nada pode ser feito.");
@@ -63,6 +64,7 @@ export function usarFerramenta(num){
                 canteiro.classList.remove('pedra_1');
                 canteiro.classList.remove('pedra_2');
                 canteiro.classList.add('vazio');
+                tocarSom("quebrando");
                 console.log("Pedra quebrada.");
             }else
                 console.log("Nada pode ser feito.");

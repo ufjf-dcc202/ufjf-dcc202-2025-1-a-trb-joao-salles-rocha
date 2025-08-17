@@ -1,6 +1,6 @@
 import { usarFerramenta } from "./interações.js";
 
-const grid = document.querySelector('.jardim');
+const grid = document.querySelector('.canteiros');
 
 export function criarJardim(){
     for (let i = 0; i < 144; i++) {

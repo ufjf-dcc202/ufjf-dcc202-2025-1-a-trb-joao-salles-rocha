@@ -1,5 +1,7 @@
 export function tocarSom(id){
-  document.getElementById(id).play();
+  const som = document.getElementById(id);
+  const repete = som.cloneNode(true);
+  repete.play();
 }
 
 export function pararSom(id){
