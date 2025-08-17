@@ -3,12 +3,16 @@
 }
 
 .jardim {
+    width: 660px;
+    height: 660px;
     display: grid;
+    margin:auto;
     justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(12, 50px);
     grid-template-rows: repeat(12, 50px);
     gap: 2px;
-    background-color:lightgreen;
+    background-color:saddlebrown;
 }
 
 /* Tipos de canteiro */
