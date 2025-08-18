@@ -3,6 +3,10 @@ let ferramenta = "preparar";
 let semente = "cenoura";
 let dinheiro = 10;
 
+let qntCenoura = 3;
+let qntBatata = 3;
+let qntCebola = 3;
+
 //Interações com o solo
 function limpaAtivosFerramenta(){
     const enxada = document.getElementById("preparar");
@@ -211,7 +215,7 @@ export function passarTempo(){
                 canteiro.classList.add('erva');
             }
         }
-        
+
         //Semente cenoura
         if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){
             canteiro.classList.remove('plantado_cenoura');

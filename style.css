@@ -36,6 +36,21 @@
     justify-content: center;
 }
 
+.qntSemente {
+    position: relative;
+    top: 0px; /* Possivelmente vou alterar depois */
+    right: 48px; /* Possivelmente vou alterar depois */  
+    padding: 2px 4px;
+
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+
+    background-image: url(imagens/slot.png);
+    background-size: 128%;
+    image-rendering: pixelated;
+}
+
 /* Tipos de canteiro */
 
 .vazio {
