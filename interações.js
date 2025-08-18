@@ -211,6 +211,7 @@ export function passarTempo(){
                 canteiro.classList.add('erva');
             }
         }
+        
         //Semente cenoura
         if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){
             canteiro.classList.remove('plantado_cenoura');
