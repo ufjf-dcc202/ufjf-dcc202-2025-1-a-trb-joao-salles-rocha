@@ -32,4 +32,4 @@ btnBatata.addEventListener("click", () => escolherSemente("batata"));
 btnBeterraba.addEventListener("click", () => escolherSemente("beterraba"));
 btnGirassol.addEventListener("click", () => escolherSemente("girassol"));
 
-btnDormir.addEventListener("click", passarTempo);
+btnDormir.addEventListener("click", () => passarTempo);

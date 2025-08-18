@@ -200,3 +200,13 @@
     background-size: 100%;
     image-rendering: pixelated;        
 }
+
+/* Dormir */
+
+.dormir{
+    width: 80px;
+    height: 160px;
+    background-image: url("imagens/cama.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated; 
+}
