@@ -66,7 +66,7 @@ export function escolherSemente(id){
 export function usarFerramenta(num){
     const canteiro = document.getElementById("canteiro_"+num);
     console.log(canteiro);
-
+    
     switch(ferramenta){
         case ferramenta = "preparar":
             if (canteiro.classList.contains('vazio')){
