@@ -113,15 +113,16 @@ export function usarFerramenta(num){
             break;
 
         case ferramenta = "plantar":
-            console.log("Nada pode ser feito.");
             if (canteiro.classList.contains('preparado')){
                 canteiro.classList.remove('preparado');
                 canteiro.classList.add('plantado');
+                canteiro.classList.add('plantado_'+semente);
                 tocarSom("plantando");
                 console.log("Semente plantada.");
             }else if (canteiro.classList.contains('regado')){
                 canteiro.classList.remove('regado');
                 canteiro.classList.add('plantadoRegado');
+                canteiro.classList.add('plantado_'+semente);
                 tocarSom("plantando");
                 console.log("Semente plantada.");
             }else
