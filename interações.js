@@ -50,16 +50,6 @@ export function usarFerramenta(num){
                 console.log("Nada pode ser feito.");
             break;
 
-       case ferramenta = "podar":
-            if (canteiro.classList.contains('erva')){
-                canteiro.classList.remove('erva');
-                canteiro.classList.add('vazio');
-                tocarSom("cortando");
-                console.log("Erva podada.");
-            }else
-                console.log("Nada pode ser feito.");
-            break;
-
        case ferramenta = "quebrar":
             if (canteiro.classList.contains('pedra_1') || canteiro.classList.contains('pedra_2')){
                 canteiro.classList.remove('pedra_1');
@@ -70,6 +60,17 @@ export function usarFerramenta(num){
             }else
                 console.log("Nada pode ser feito.");
             break;
+            
+       case ferramenta = "podar":
+            if (canteiro.classList.contains('erva')){
+                canteiro.classList.remove('erva');
+                canteiro.classList.add('vazio');
+                tocarSom("cortando");
+                console.log("Erva podada.");
+            }else
+                console.log("Nada pode ser feito.");
+            break;
+
     }
 }
 

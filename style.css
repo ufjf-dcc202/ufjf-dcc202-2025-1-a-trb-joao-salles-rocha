@@ -75,7 +75,7 @@
 
 /* Tipos de semente */
 
-/* Botão */
+/* Ferramentas */
 
 .enxada{
     width: 80px;
@@ -84,6 +84,7 @@
     background-size: 100%;
     image-rendering: pixelated;
 }
+
 .regador{
     width: 80px;
     height: 80px;
@@ -91,17 +92,19 @@
     background-size: 100%;
     image-rendering: pixelated;
 }
-.foice{
-    width: 80px;
-    height: 80px;
-    background-image: url("imagens/foice.png"), url(imagens/slot.png);
-    background-size: 100%;
-    image-rendering: pixelated;
-}
+
 .picareta{
     width: 80px;
     height: 80px;
     background-image: url("imagens/picareta.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.foice{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/foice.png"), url(imagens/slot.png);
     background-size: 100%;
     image-rendering: pixelated;
 }
@@ -113,6 +116,9 @@
     background-size: 100%;
     image-rendering: pixelated;
 }
+
+/* Botão */
+
 .botão{
     display: flex;
     margin:auto;
@@ -120,6 +126,7 @@
     align-items: center;
     background-image: none;
 }
+
 .ativo{
     width: 80px;
     height: 80px;
