@@ -83,6 +83,10 @@ export function usarFerramenta(num){
                 canteiro.classList.remove('preparado');
                 canteiro.classList.add('regado');
                 console.log("Canteiro regado.");
+            }else if(canteiro.classList.contains('plantado')){
+                canteiro.classList.remove('plantado');
+                canteiro.classList.add('plantadoRegado');
+                console.log("Canteiro regado.");
             }else
                 console.log("Nada pode ser feito.");
             break;
