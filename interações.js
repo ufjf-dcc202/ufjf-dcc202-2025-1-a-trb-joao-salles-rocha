@@ -206,6 +206,12 @@ export function passarTempo(){
             canteiro.classList.add('vazio');
         }
 
+        //Despreparar chão
+        if (canteiro.classList.contains('preparado')){
+            canteiro.classList.remove('preparado');
+            canteiro.classList.add('vazio');    
+        }
+
         //Nascer erva
         if (canteiro.classList.contains('vazio')){
 
