@@ -1,6 +1,6 @@
 //Imports
 import { criarJardim } from "./criaJardim.js";
-import { escolherFerramenta, escolherSemente, passarTempo } from "./interações.js";
+import { escolherFerramenta, escolherSemente, executarAtalhos, passarTempo } from "./interações.js";
 
 
 const btnPreparar = document.querySelector("#preparar");

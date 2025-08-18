@@ -135,3 +135,57 @@ export function usarFerramenta(num){
 export function passarTempo(){
 
 }
+
+//Atalhos
+document.addEventListener("keydown", executarAtalhos);
+
+export function executarAtalhos(){
+        if (event.key === 'w') { 
+            console.log('Semente anterior');
+            switch(semente){
+                case semente = "cenoura":
+                    escolherSemente("girassol");
+                    break;
+                
+                case semente = "cebola":
+                    escolherSemente("cenoura");
+                    break;
+
+                case semente = "batata":
+                    escolherSemente("cebola");
+                    break;
+
+                case semente = "beterraba":
+                    escolherSemente("batata");
+                    break;
+
+                case semente = "girassol":
+                    escolherSemente("beterraba");
+                    break;                
+            }
+        }
+    if (event.key === 's') { 
+            console.log('Próxima semente');
+            switch(semente){
+                case semente = "cenoura":
+                    escolherSemente("cebola");
+                    break;
+                
+                case semente = "cebola":
+                    escolherSemente("batata");
+                    break;
+
+                case semente = "batata":
+                    escolherSemente("beterraba");
+                    break;
+
+                case semente = "beterraba":
+                    escolherSemente("girassol");
+                    break;
+
+                case semente = "girassol":
+                    escolherSemente("cenoura");
+                    break;                
+            }
+        }
+}
