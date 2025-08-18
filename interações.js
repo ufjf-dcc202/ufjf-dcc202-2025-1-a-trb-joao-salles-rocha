@@ -140,52 +140,103 @@ export function passarTempo(){
 document.addEventListener("keydown", executarAtalhos);
 
 export function executarAtalhos(){
-        if (event.key === 'w') { 
-            console.log('Semente anterior');
-            switch(semente){
-                case semente = "cenoura":
-                    escolherSemente("girassol");
-                    break;
+    if (event.key === 'w') { 
+        console.log('Semente anterior');
+        switch(semente){
+            case semente = "cenoura":
+               escolherSemente("girassol");
+                break;
                 
-                case semente = "cebola":
-                    escolherSemente("cenoura");
-                    break;
+            case semente = "cebola":
+                escolherSemente("cenoura");
+                break;
 
-                case semente = "batata":
-                    escolherSemente("cebola");
-                    break;
+            case semente = "batata":
+                escolherSemente("cebola");
+                break;
 
-                case semente = "beterraba":
-                    escolherSemente("batata");
-                    break;
+             case semente = "beterraba":
+                escolherSemente("batata");
+                break;
 
-                case semente = "girassol":
-                    escolherSemente("beterraba");
-                    break;                
-            }
+            case semente = "girassol":
+                escolherSemente("beterraba");
+                break;                
         }
+    }
+
     if (event.key === 's') { 
-            console.log('Próxima semente');
-            switch(semente){
-                case semente = "cenoura":
-                    escolherSemente("cebola");
-                    break;
+        console.log('Próxima semente');
+        switch(semente){
+            case semente = "cenoura":
+                 escolherSemente("cebola");
+                break;
                 
-                case semente = "cebola":
-                    escolherSemente("batata");
-                    break;
+             case semente = "cebola":
+             escolherSemente("batata");
+                break;
 
-                case semente = "batata":
-                    escolherSemente("beterraba");
-                    break;
+            case semente = "batata":
+                escolherSemente("beterraba");
+                break;
 
-                case semente = "beterraba":
-                    escolherSemente("girassol");
-                    break;
+            case semente = "beterraba":
+                escolherSemente("girassol");
+                break;
 
-                case semente = "girassol":
-                    escolherSemente("cenoura");
-                    break;                
-            }
+            case semente = "girassol":
+                escolherSemente("cenoura");
+                break;                
         }
+    }
+
+    if (event.key === 'a'){
+        console.log('Ferramenta anterior');
+        switch(ferramenta){
+            case ferramenta = "preparar":
+                escolherFerramenta("plantar");
+                break;
+                
+            case ferramenta = "regar":
+                escolherFerramenta("preparar");
+                break;
+
+            case ferramenta = "quebrar":
+                escolherFerramenta("regar");
+                break;
+
+            case ferramenta = "podar":
+                escolherFerramenta("quebrar");
+                break;
+
+            case ferramenta = "plantar":
+                escolherFerramenta("podar");
+                break;                
+        }
+    }
+
+    if (event.key === 'd'){
+        console.log('Próxima ferramenta');
+        switch(ferramenta){
+            case ferramenta = "preparar":
+                escolherFerramenta("regar");
+                break;
+                
+            case ferramenta = "regar":
+                escolherFerramenta("quebrar");
+                break;
+
+            case ferramenta = "quebrar":
+                escolherFerramenta("podar");
+                break;
+
+            case ferramenta = "podar":
+               escolherFerramenta("plantar");
+                break;
+
+            case ferramenta = "plantar":
+                escolherFerramenta("preparar");
+                break;                
+        }
+    }
 }
