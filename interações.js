@@ -1,8 +1,9 @@
 import { tocarSom, pararSom } from "./audio.js";
 let ferramenta = "preparar";
+let semente = "cenoura";
 
 //Interações com o solo
-function limpaAtivos(){
+function limpaAtivosFerramenta(){
     const enxada = document.getElementById("preparar");
     const regador = document.getElementById("regar");
     const tesoura = document.getElementById("podar");
@@ -14,14 +15,51 @@ function limpaAtivos(){
     picareta.classList.remove('ativo');
     semente.classList.remove('ativo');
 }
+
+function limpaAtivosSemente(){
+    const sementeGeral = document.getElementById("plantar");
+    const cenoura = document.getElementById("cenoura");
+    const cebola = document.getElementById("cebola");
+    const batata = document.getElementById("batata");
+    const espinafre = document.getElementById("beterraba");
+    const girassol = document.getElementById("girassol");
+    cenoura.classList.remove('ativo');
+    cebola.classList.remove('ativo');
+    batata.classList.remove('ativo');
+    espinafre.classList.remove('ativo');
+    girassol.classList.remove('ativo');
+
+    sementeGeral.classList.remove('cenoura');
+    sementeGeral.classList.remove('cebola');
+    sementeGeral.classList.remove('batata');
+    sementeGeral.classList.remove('beterraba');
+    sementeGeral.classList.remove('girassol');
+}
+
+
 function trocarFerramenta(id){
     ferramenta = id;
 }
+
+function  trocarSemente(id){
+    semente = id;
+}
+
 export function escolherFerramenta(id){
-    const opção = document.getElementById(id);
-    limpaAtivos();
-    opção.classList.add('ativo');
+    const opFerramenta = document.getElementById(id);
+    limpaAtivosFerramenta();
+    opFerramenta.classList.add('ativo');
     trocarFerramenta(id);
+    tocarSom("trocarItem");
+}
+
+export function escolherSemente(id){
+    const opSemente = document.getElementById(id);
+    const opSementeGeral = document.getElementById("plantar");
+    limpaAtivosSemente();
+    opSemente.classList.add('ativo');
+    opSementeGeral.classList.add(id);
+    trocarSemente(id);
     tocarSom("trocarItem");
 }
 
@@ -60,7 +98,7 @@ export function usarFerramenta(num){
             }else
                 console.log("Nada pode ser feito.");
             break;
-            
+
        case ferramenta = "podar":
             if (canteiro.classList.contains('erva')){
                 canteiro.classList.remove('erva');

@@ -4,6 +4,13 @@
     image-rendering: pixelated;
 }
 
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .jardim {
     width: 660px;
     height: 660px;
@@ -21,6 +28,12 @@
     grid-template-rows: repeat(12, 50px);
     gap: 2px;
     background-image: none;
+}
+
+.sementes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Tipos de canteiro */
@@ -73,8 +86,6 @@
     image-rendering: pixelated;
 }
 
-/* Tipos de semente */
-
 /* Ferramentas */
 
 .enxada{
@@ -112,7 +123,6 @@
 .semente{
     width: 80px;
     height: 80px;
-    background-image: url("imagens/cenoura_s.png"), url(imagens/slot.png);
     background-size: 100%;
     image-rendering: pixelated;
 }
@@ -132,4 +142,46 @@
     height: 80px;
     border: solid;
     border-color: brown;
+}
+
+/* Tipos de Semente */
+
+.cenoura{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/cenoura_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/cebola_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated; 
+}
+
+.batata{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/batata_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;     
+}
+
+.beterraba{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/beterraba_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;    
+}
+
+.girassol{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/girassol_s.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;        
 }

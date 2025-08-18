@@ -8,16 +8,26 @@
     <script src="main.js" type="module"></script>
 </head>
 <body>
-    <div class="jardim">    <!-- Cria o espaço para as células iniciais-->
-        <div class="canteiros"></div>
-    </div> 
+    <div class = "principal">
+        <div class="jardim">    <!-- Cria o espaço para as células iniciais-->
+            <div class="canteiros"></div>
+        </div> 
+        <div class="sementes">
+            <button class="cenoura" id="cenoura"></button>
+            <button class="cebola" id="cebola"></button>
+            <button class="batata" id="batata"></button>
+            <button class="beterraba" id="beterraba"></button> 
+            <button class="girassol" id="girassol"></button> 
+        </div>
+
+    </div>
 
     <section class="botão">
-        <button class="ativo enxada" data-ferramenta="enxada" id="preparar"></button>
-        <button class = "regador" data-ferramenta="regador" id="regar"></button>
-        <button class = "picareta" data-ferramenta="picareta" id="quebrar"></button>
-        <button class = "foice" data-ferramenta="tesoura" id="podar"></button>
-        <button class = "semente" data-ferramenta="semente" id="plantar"></button>
+        <button class="ativo enxada" id="preparar"></button>
+        <button class = "regador" id="regar"></button>
+        <button class = "picareta" id="quebrar"></button>
+        <button class = "foice" id="podar"></button>
+        <button class = "cenoura semente" id="plantar"></button>
     </section>
     
     <section class="sons">
