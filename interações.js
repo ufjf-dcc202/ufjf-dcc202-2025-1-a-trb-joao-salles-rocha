@@ -21,19 +21,13 @@ function limpaAtivosSemente(){
     const cenoura = document.getElementById("cenoura");
     const cebola = document.getElementById("cebola");
     const batata = document.getElementById("batata");
-    const espinafre = document.getElementById("beterraba");
-    const girassol = document.getElementById("girassol");
     cenoura.classList.remove('ativo');
     cebola.classList.remove('ativo');
     batata.classList.remove('ativo');
-    espinafre.classList.remove('ativo');
-    girassol.classList.remove('ativo');
 
     sementeGeral.classList.remove('cenoura');
     sementeGeral.classList.remove('cebola');
     sementeGeral.classList.remove('batata');
-    sementeGeral.classList.remove('beterraba');
-    sementeGeral.classList.remove('girassol');
 }
 
 
@@ -66,7 +60,7 @@ export function escolherSemente(id){
 export function usarFerramenta(num){
     const canteiro = document.getElementById("canteiro_"+num);
     console.log(canteiro);
-    
+
     switch(ferramenta){
         case ferramenta = "preparar":
             if (canteiro.classList.contains('vazio')){
@@ -87,8 +81,20 @@ export function usarFerramenta(num){
                 canteiro.classList.remove('plantado');
                 canteiro.classList.add('plantadoRegado');
                 console.log("Canteiro regado.");
-            }else
-                console.log("Nada pode ser feito.");
+            }
+            if(canteiro.classList.contains('cenoura_1a')){
+                canteiro.classList.remove('cenoura_1a');
+                canteiro.classList.add('cenoura_1b');
+                console.log("Canteiro regado.");
+            }else if(canteiro.classList.contains('cenoura_2a')){
+                canteiro.classList.remove('cenoura_2a');
+                canteiro.classList.add('cenoura_2b');
+                console.log("Canteiro regado.");
+            }else if(canteiro.classList.contains('cenoura_3a')){
+                canteiro.classList.remove('cenoura_3a');
+                canteiro.classList.add('cenoura_3b');
+                console.log("Canteiro regado.");
+            }
             break;
 
        case ferramenta = "quebrar":
@@ -133,18 +139,54 @@ export function usarFerramenta(num){
 
 //Interações extras
 export function passarTempo(){
+    tocarSom("trocarItem");
+    for (let i = 0; i < 144; i++){
+        let canteiro = document.getElementById("canteiro_"+i);
 
+        //Semente seca
+        if (canteiro.classList.contains('seco')){
+            canteiro.classList.remove('seco');
+            canteiro.classList.add('vazio');
+        }
+
+        //Semente cenoura
+        if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){
+            canteiro.classList.remove('plantado_cenoura');
+            canteiro.classList.remove('plantadoRegado');
+            canteiro.classList.add('plantado');
+            canteiro.classList.add('cenoura_1a');   
+        }else if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantado')){
+            canteiro.classList.remove('plantado_cenoura');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('cenoura_1b')){
+            canteiro.classList.remove('cenoura_1b');
+            canteiro.classList.add('cenoura_2a');   
+        }else if (canteiro.classList.contains('cenoura_1a')){
+            canteiro.classList.remove('cenoura_1a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('cenoura_2b')){
+            canteiro.classList.remove('cenoura_2b');
+            canteiro.classList.add('cenoura_3a');   
+        }else if (canteiro.classList.contains('cenoura_2a')){
+            canteiro.classList.remove('cenoura_2a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }
+
+    }
 }
 
 //Atalhos
 document.addEventListener("keydown", executarAtalhos);
 
-export function executarAtalhos(){
+function executarAtalhos(){
     if (event.key === 'w') { 
         console.log('Semente anterior');
         switch(semente){
             case semente = "cenoura":
-               escolherSemente("girassol");
+               escolherSemente("batata");
                 break;
                 
             case semente = "cebola":
@@ -154,14 +196,6 @@ export function executarAtalhos(){
             case semente = "batata":
                 escolherSemente("cebola");
                 break;
-
-             case semente = "beterraba":
-                escolherSemente("batata");
-                break;
-
-            case semente = "girassol":
-                escolherSemente("beterraba");
-                break;                
         }
     }
 
@@ -177,16 +211,8 @@ export function executarAtalhos(){
                 break;
 
             case semente = "batata":
-                escolherSemente("beterraba");
-                break;
-
-            case semente = "beterraba":
-                escolherSemente("girassol");
-                break;
-
-            case semente = "girassol":
                 escolherSemente("cenoura");
-                break;                
+                break;              
         }
     }
 

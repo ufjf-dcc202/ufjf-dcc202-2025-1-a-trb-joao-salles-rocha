@@ -185,20 +185,60 @@
     image-rendering: pixelated;     
 }
 
-.beterraba{
-    width: 80px;
-    height: 80px;
-    background-image: url("imagens/beterraba_s.png"), url(imagens/slot.png);
+/* Sementes plantadas */
+.seco{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/seco_1.png"), url(imagens/terra_1.png);
     background-size: 100%;
-    image-rendering: pixelated;    
+    image-rendering: pixelated;
+}
+.cenoura_1a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_1.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
-.girassol{
-    width: 80px;
-    height: 80px;
-    background-image: url("imagens/girassol_s.png"), url(imagens/slot.png);
+.cenoura_1b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_1.png"), url(imagens/terra_2.png);
     background-size: 100%;
-    image-rendering: pixelated;        
+    image-rendering: pixelated;
+}
+
+.cenoura_2a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_2.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cenoura_2b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_2.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cenoura_3a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_3.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cenoura_3b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cenoura_3.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
 }
 
 /* Dormir */
