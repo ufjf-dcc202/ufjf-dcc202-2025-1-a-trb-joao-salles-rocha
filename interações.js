@@ -201,6 +201,16 @@ export function passarTempo(){
             canteiro.classList.remove('regado');
             canteiro.classList.add('vazio');
         }
+
+        //Nascer erva
+        if (canteiro.classList.contains('vazio')){
+
+            let i = Math.floor(Math.random() * 100);
+            if (i>=95){
+                canteiro.classList.remove('vazio');
+                canteiro.classList.add('erva');
+            }
+        }
         //Semente cenoura
         if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){
             canteiro.classList.remove('plantado_cenoura');
