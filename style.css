@@ -193,6 +193,7 @@
     background-size: 100%;
     image-rendering: pixelated;
 }
+
 .cenoura_1a{
     width: 50px;
     height: 50px;
@@ -241,6 +242,103 @@
     image-rendering: pixelated;
 }
 
+
+.batata_1a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_1.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.batata_1b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_1.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.batata_2a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_2.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.batata_2b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_2.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.batata_3a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_3.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.batata_3b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/batata_3.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+
+.cebola_1a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_1.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola_1b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_1.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola_2a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_2.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola_2b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_2.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola_3a{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_3.png"), url(imagens/terra_1.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.cebola_3b{
+    width: 50px;
+    height: 50px;
+    background-image: url("imagens/cebola_3.png"), url(imagens/terra_2.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
 /* Dormir */
 
 .dormir{

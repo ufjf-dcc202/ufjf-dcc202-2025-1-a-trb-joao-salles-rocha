@@ -82,6 +82,7 @@ export function usarFerramenta(num){
                 canteiro.classList.add('plantadoRegado');
                 console.log("Canteiro regado.");
             }
+            //Cenoura
             if(canteiro.classList.contains('cenoura_1a')){
                 canteiro.classList.remove('cenoura_1a');
                 canteiro.classList.add('cenoura_1b');
@@ -89,6 +90,28 @@ export function usarFerramenta(num){
             }else if(canteiro.classList.contains('cenoura_2a')){
                 canteiro.classList.remove('cenoura_2a');
                 canteiro.classList.add('cenoura_2b');
+                console.log("Canteiro regado.");
+            }
+
+            //Batata
+            if(canteiro.classList.contains('batata_1a')){
+                canteiro.classList.remove('batata_1a');
+                canteiro.classList.add('batata_1b');
+                console.log("Canteiro regado.");
+            }else if(canteiro.classList.contains('batata_2a')){
+                canteiro.classList.remove('batata_2a');
+                canteiro.classList.add('batata_2b');
+                console.log("Canteiro regado.");
+            }
+
+            //Cebola
+            if(canteiro.classList.contains('cebola_1a')){
+                canteiro.classList.remove('cebola_1a');
+                canteiro.classList.add('cebola_1b');
+                console.log("Canteiro regado.");
+            }else if(canteiro.classList.contains('cebola_2a')){
+                canteiro.classList.remove('cebola_2a');
+                canteiro.classList.add('cebola_2b');
                 console.log("Canteiro regado.");
             }
             break;
@@ -167,6 +190,58 @@ export function passarTempo(){
             canteiro.classList.add('cenoura_3a');   
         }else if (canteiro.classList.contains('cenoura_2a')){
             canteiro.classList.remove('cenoura_2a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }
+
+        //Semente batata
+        if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantadoRegado')){
+            canteiro.classList.remove('plantado_batata');
+            canteiro.classList.remove('plantadoRegado');
+            canteiro.classList.add('plantado');
+            canteiro.classList.add('batata_1a');   
+        }else if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantado')){
+            canteiro.classList.remove('plantado_batata');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('batata_1b')){
+            canteiro.classList.remove('batata_1b');
+            canteiro.classList.add('batata_2a');   
+        }else if (canteiro.classList.contains('batata_1a')){
+            canteiro.classList.remove('batata_1a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('batata_2b')){
+            canteiro.classList.remove('batata_2b');
+            canteiro.classList.add('batata_3a');   
+        }else if (canteiro.classList.contains('batata_2a')){
+            canteiro.classList.remove('batata_2a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }
+
+        //Semente cebola
+        if (canteiro.classList.contains('plantado_cebola') && canteiro.classList.contains('plantadoRegado')){
+            canteiro.classList.remove('plantado_cebola');
+            canteiro.classList.remove('plantadoRegado');
+            canteiro.classList.add('plantado');
+            canteiro.classList.add('cebola_1a');   
+        }else if (canteiro.classList.contains('plantado_cebola') && canteiro.classList.contains('plantado')){
+            canteiro.classList.remove('plantado_cebola');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('cebola_1b')){
+            canteiro.classList.remove('cebola_1b');
+            canteiro.classList.add('cebola_2a');   
+        }else if (canteiro.classList.contains('cebola_1a')){
+            canteiro.classList.remove('cebola_1a');
+            canteiro.classList.remove('plantado');
+            canteiro.classList.add('seco');   
+        }else if (canteiro.classList.contains('cebola_2b')){
+            canteiro.classList.remove('cebola_2b');
+            canteiro.classList.add('cebola_3a');   
+        }else if (canteiro.classList.contains('cebola_2a')){
+            canteiro.classList.remove('cebola_2a');
             canteiro.classList.remove('plantado');
             canteiro.classList.add('seco');   
         }
