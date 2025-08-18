@@ -142,6 +142,14 @@
     image-rendering: pixelated;
 }
 
+.mão{
+    width: 80px;
+    height: 80px;
+    background-image: url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
 /* Botão */
 
 .botão{
@@ -226,18 +234,10 @@
     image-rendering: pixelated;
 }
 
-.cenoura_3a{
+.cenoura_3{
     width: 50px;
     height: 50px;
     background-image: url("imagens/cenoura_3.png"), url(imagens/terra_1.png);
-    background-size: 100%;
-    image-rendering: pixelated;
-}
-
-.cenoura_3b{
-    width: 50px;
-    height: 50px;
-    background-image: url("imagens/cenoura_3.png"), url(imagens/terra_2.png);
     background-size: 100%;
     image-rendering: pixelated;
 }
@@ -275,18 +275,10 @@
     image-rendering: pixelated;
 }
 
-.batata_3a{
+.batata_3{
     width: 50px;
     height: 50px;
     background-image: url("imagens/batata_3.png"), url(imagens/terra_1.png);
-    background-size: 100%;
-    image-rendering: pixelated;
-}
-
-.batata_3b{
-    width: 50px;
-    height: 50px;
-    background-image: url("imagens/batata_3.png"), url(imagens/terra_2.png);
     background-size: 100%;
     image-rendering: pixelated;
 }
@@ -324,7 +316,7 @@
     image-rendering: pixelated;
 }
 
-.cebola_3a{
+.cebola_3{
     width: 50px;
     height: 50px;
     background-image: url("imagens/cebola_3.png"), url(imagens/terra_1.png);
@@ -332,13 +324,6 @@
     image-rendering: pixelated;
 }
 
-.cebola_3b{
-    width: 50px;
-    height: 50px;
-    background-image: url("imagens/cebola_3.png"), url(imagens/terra_2.png);
-    background-size: 100%;
-    image-rendering: pixelated;
-}
 /* Dormir */
 
 .dormir{

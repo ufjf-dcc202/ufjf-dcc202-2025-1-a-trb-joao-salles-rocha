@@ -8,6 +8,7 @@ const btnRegar = document.querySelector("#regar");
 const btnQuebrar = document.querySelector("#quebrar");
 const btnCortar = document.querySelector("#podar");
 const btnPlantar = document.querySelector("#plantar");
+const btnColher = document.querySelector("#colher");
 
 const btnCenoura = document.querySelector("#cenoura");
 const btnCebola = document.querySelector("#cebola");
@@ -23,6 +24,7 @@ btnRegar.addEventListener("click", () => escolherFerramenta("regar"));
 btnQuebrar.addEventListener("click", () => escolherFerramenta("quebrar"));
 btnCortar.addEventListener("click", () => escolherFerramenta("podar"));
 btnPlantar.addEventListener("click", () => escolherFerramenta("plantar"));
+btnColher.addEventListener("click", () => escolherFerramenta("colher"));
 
 btnCenoura.addEventListener("click", () => escolherSemente("cenoura"));
 btnCebola.addEventListener("click", () => escolherSemente("cebola"));

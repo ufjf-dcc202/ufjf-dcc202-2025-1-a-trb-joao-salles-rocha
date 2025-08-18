@@ -1,6 +1,7 @@
 import { tocarSom, pararSom } from "./audio.js";
 let ferramenta = "preparar";
 let semente = "cenoura";
+let dinheiro = 10;
 
 //Interações com o solo
 function limpaAtivosFerramenta(){
@@ -9,11 +10,13 @@ function limpaAtivosFerramenta(){
     const tesoura = document.getElementById("podar");
     const picareta = document.getElementById("quebrar");
     const semente = document.getElementById("plantar");
+    const mão = document.getElementById("colher");
     enxada.classList.remove('ativo');
     regador.classList.remove('ativo');
     tesoura.classList.remove('ativo');
     picareta.classList.remove('ativo');
     semente.classList.remove('ativo');
+    mão.classList.remove('ativo');
 }
 
 function limpaAtivosSemente(){
@@ -84,33 +87,33 @@ export function usarFerramenta(num){
             }
             //Cenoura
             if(canteiro.classList.contains('cenoura_1a')){
-                canteiro.classList.remove('cenoura_1a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('cenoura_1b');
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('cenoura_2a')){
-                canteiro.classList.remove('cenoura_2a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('cenoura_2b');
                 console.log("Canteiro regado.");
             }
 
             //Batata
             if(canteiro.classList.contains('batata_1a')){
-                canteiro.classList.remove('batata_1a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('batata_1b');
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('batata_2a')){
-                canteiro.classList.remove('batata_2a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('batata_2b');
                 console.log("Canteiro regado.");
             }
 
             //Cebola
             if(canteiro.classList.contains('cebola_1a')){
-                canteiro.classList.remove('cebola_1a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_1b');
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('cebola_2a')){
-                canteiro.classList.remove('cebola_2a');
+                canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_2b');
                 console.log("Canteiro regado.");
             }
@@ -153,6 +156,31 @@ export function usarFerramenta(num){
             }else
                 console.log("Nada pode ser feito.");
             break;
+
+        case ferramenta = "mão":
+            if (canteiro.classList.contains('cenoura_3')){
+                dinheiro+=20;
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('vazio');
+                tocarSom("plantando");
+                console.log("Cenoura coletada.");
+                console.log(dinheiro);
+            }else if (canteiro.classList.contains('batata_3')){
+                dinheiro+=40;
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('vazio');
+                tocarSom("plantando");
+                console.log("Batata coletada.");
+                console.log(dinheiro);
+            }else if (canteiro.classList.contains('cebola_3')){
+                dinheiro+=60;
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('vazio');
+                tocarSom("plantando");
+                console.log("Cebola coletada.");
+                console.log(dinheiro);
+            }
+            break;
     }
 }
 
@@ -161,7 +189,7 @@ export function passarTempo(){
     tocarSom("trocarItem");
     for (let i = 0; i < 144; i++){
         let canteiro = document.getElementById("canteiro_"+i);
-
+        
         //Semente seca
         if (canteiro.classList.contains('seco')){
             canteiro.classList.remove('seco');
@@ -175,21 +203,19 @@ export function passarTempo(){
             canteiro.classList.add('plantado');
             canteiro.classList.add('cenoura_1a');   
         }else if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantado')){
-            canteiro.classList.remove('plantado_cenoura');
-            canteiro.classList.remove('plantado');
+            canteiro.removeAttribute('class');
             canteiro.classList.add('seco');   
         }else if (canteiro.classList.contains('cenoura_1b')){
             canteiro.classList.remove('cenoura_1b');
             canteiro.classList.add('cenoura_2a');   
         }else if (canteiro.classList.contains('cenoura_1a')){
-            canteiro.classList.remove('cenoura_1a');
-            canteiro.classList.remove('plantado');
+            canteiro.removeAttribute('class');
             canteiro.classList.add('seco');   
         }else if (canteiro.classList.contains('cenoura_2b')){
-            canteiro.classList.remove('cenoura_2b');
-            canteiro.classList.add('cenoura_3a');   
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('cenoura_3');   
         }else if (canteiro.classList.contains('cenoura_2a')){
-            canteiro.classList.remove('cenoura_2a');
+            canteiro.removeAttribute('class');
             canteiro.classList.remove('plantado');
             canteiro.classList.add('seco');   
         }
@@ -213,7 +239,7 @@ export function passarTempo(){
             canteiro.classList.add('seco');   
         }else if (canteiro.classList.contains('batata_2b')){
             canteiro.classList.remove('batata_2b');
-            canteiro.classList.add('batata_3a');   
+            canteiro.classList.add('batata_3');   
         }else if (canteiro.classList.contains('batata_2a')){
             canteiro.classList.remove('batata_2a');
             canteiro.classList.remove('plantado');
@@ -239,7 +265,7 @@ export function passarTempo(){
             canteiro.classList.add('seco');   
         }else if (canteiro.classList.contains('cebola_2b')){
             canteiro.classList.remove('cebola_2b');
-            canteiro.classList.add('cebola_3a');   
+            canteiro.classList.add('cebola_3');   
         }else if (canteiro.classList.contains('cebola_2a')){
             canteiro.classList.remove('cebola_2a');
             canteiro.classList.remove('plantado');
