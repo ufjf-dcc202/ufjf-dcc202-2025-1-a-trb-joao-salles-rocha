@@ -65,7 +65,6 @@ export function escolherSemente(id){
 
 export function usarFerramenta(num){
     const canteiro = document.getElementById("canteiro_"+num);
-    const tipo = document.classList
     console.log(canteiro);
 
     switch(ferramenta){
@@ -109,6 +108,21 @@ export function usarFerramenta(num){
                 console.log("Nada pode ser feito.");
             break;
 
+        case ferramenta = "plantar":
+            console.log("Nada pode ser feito.");
+            if (canteiro.classList.contains('preparado')){
+                canteiro.classList.remove('preparado');
+                canteiro.classList.add('plantado');
+                tocarSom("plantando");
+                console.log("Semente plantada.");
+            }else if (canteiro.classList.contains('regado')){
+                canteiro.classList.remove('regado');
+                canteiro.classList.add('plantadoRegado');
+                tocarSom("plantando");
+                console.log("Semente plantada.");
+            }else
+                console.log("Nada pode ser feito.");
+            break;
     }
 }
 
