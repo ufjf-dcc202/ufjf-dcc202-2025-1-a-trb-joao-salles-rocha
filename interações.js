@@ -90,10 +90,6 @@ export function usarFerramenta(num){
                 canteiro.classList.remove('cenoura_2a');
                 canteiro.classList.add('cenoura_2b');
                 console.log("Canteiro regado.");
-            }else if(canteiro.classList.contains('cenoura_3a')){
-                canteiro.classList.remove('cenoura_3a');
-                canteiro.classList.add('cenoura_3b');
-                console.log("Canteiro regado.");
             }
             break;
 
