@@ -145,7 +145,7 @@
 .mão{
     width: 80px;
     height: 80px;
-    background-image: url(imagens/slot.png);
+    background-image: url(imagens/mão.png), url(imagens/slot.png);
     background-size: 100%;
     image-rendering: pixelated;
 }
