@@ -35,6 +35,7 @@ export function usarFerramenta(num){
             if (canteiro.classList.contains('vazio')){
                 canteiro.classList.remove('vazio');
                 canteiro.classList.add('preparado');
+                tocarSom("preparando");
                 console.log("Canteiro preparado.");
             }else
                 console.log("Nada pode ser feito.");
