@@ -6,6 +6,7 @@ let dinheiro = 10;
 let qntCenoura = 3;
 let qntBatata = 3;
 let qntCebola = 3;
+let plantou = 0;
 
 //Interações com o solo
 function limpaAtivosFerramenta(){
@@ -42,7 +43,7 @@ function trocarFerramenta(id){
     ferramenta = id;
 }
 
-function  trocarSemente(id){
+function trocarSemente(id){
     semente = id;
 }
 
@@ -145,20 +146,43 @@ export function usarFerramenta(num){
             break;
 
         case ferramenta = "plantar":
-            if (canteiro.classList.contains('preparado')){
+            if (((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "cenoura" && qntCenoura === 0 )|| 
+                ((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "batata" && qntBatata === 0 )||
+                ((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "cebola" && qntCebola === 0 )){
+                   console.log("Sem mais sementes. :("); 
+            }else if (canteiro.classList.contains('preparado')){
                 canteiro.classList.remove('preparado');
                 canteiro.classList.add('plantado');
                 canteiro.classList.add('plantado_'+semente);
                 tocarSom("plantando");
                 console.log("Semente plantada.");
+                plantou = 1;
             }else if (canteiro.classList.contains('regado')){
                 canteiro.classList.remove('regado');
                 canteiro.classList.add('plantadoRegado');
                 canteiro.classList.add('plantado_'+semente);
                 tocarSom("plantando");
                 console.log("Semente plantada.");
+                plantou = 1;
             }else
                 console.log("Nada pode ser feito.");
+
+            //Limitador de sementes
+            if (plantou === 1 && semente === "cenoura" && qntCenoura > 0){
+                qntCenoura--;
+                plantou = 0;
+                console.log("Cenoura: "+qntCenoura);
+            }
+            if (plantou === 1 && semente === "batata" && qntBatata > 0){
+                qntBatata--;
+                plantou = 0;
+                console.log("Batata: "+qntBatata);
+            }
+            if (plantou === 1 && semente === "cebola" && qntCebola > 0){
+                qntCebola--;
+                plantou = 0;
+                console.log("Cebola: "+qntCebola);
+            }
             break;
 
         case ferramenta = "mão":
