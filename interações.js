@@ -83,6 +83,12 @@ export function escolherSemente(id){
     opSementeGeral.classList.add(id);
     trocarSemente(id);
     tocarSom("trocarItem");
+    if(id === "cenoura")
+        document.getElementById("prcSemente").innerHTML = "Preço da Cenoura: 15";
+    else if(id === "batata")
+        document.getElementById("prcSemente").innerHTML = "Preço da Batata: 40";
+    else if(id === "cebola")
+        document.getElementById("prcSemente").innerHTML = "Preço da Cebola: 60";
 }
 
 export function usarFerramenta(num){

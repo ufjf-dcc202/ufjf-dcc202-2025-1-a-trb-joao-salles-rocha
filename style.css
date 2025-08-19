@@ -66,7 +66,7 @@
 .qntDias{
     position: absolute;
     top: 10px;
-    left: 10px; 
+    left: 8px; 
     padding: 2px 4px;
 
     color: black;
@@ -85,7 +85,7 @@
 .qntDinheiros{
     position: absolute;
     top: 50px;
-    left: 10px;  
+    left: 8px;  
     padding: 2px 4px;
 
     color: black;
@@ -98,6 +98,24 @@
 
     border: solid;
     border-color: #892665;
+}
+
+.prcSementes{
+    position: absolute;
+    top: 460px;
+    left: 8px;  
+    padding: 2px 4px;
+
+    color: black;
+    font-family:monospace;
+    font-size: 24px;
+    font-weight: bold;
+
+    background-image: none;
+    background-color: #ffc979;
+
+    border: solid;
+    border-color: #892665;    
 }
 
 /* Tipos de canteiro */
