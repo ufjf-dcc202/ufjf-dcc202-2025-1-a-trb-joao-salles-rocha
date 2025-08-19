@@ -288,47 +288,113 @@ export function passarTempo(){
         }
 
         //Semente cenoura
-        if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){
-            canteiro.classList.remove('plantado_cenoura');
-            canteiro.classList.remove('plantadoRegado');
-            canteiro.classList.add('cenoura_1a');
-        }else if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantado')){
+        if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantado')){ // 0!
             canteiro.removeAttribute('class');
             canteiro.classList.add('seco');
-        }else if (canteiro.classList.contains('cenoura_1b')){
-            canteiro.classList.remove('cenoura_1b');
+            contadores[i] = 0;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+        }
+
+        if (canteiro.classList.contains('plantado_cenoura') && canteiro.classList.contains('plantadoRegado')){ // +1 ->
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('cenoura_1a');
+            contadores[i]++;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+        }else if (canteiro.classList.contains('cenoura_1a')){ // 0!
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('seco');
+            contadores[i] = 0;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+        }
+        if (contadores[i] < 1){
+            if (canteiro.classList.contains('cenoura_1b')){ // 1 ->
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('cenoura_1a');                
+                contadores[i]++;
+                console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+            }
+        }
+
+        if (contadores[i] === 1 && canteiro.classList.contains('cenoura_1b')){ // -> 2
+            canteiro.removeAttribute('class');
             canteiro.classList.add('cenoura_2a');
-        }else if (canteiro.classList.contains('cenoura_1a')){
+            contadores[i]++;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+        }else if (canteiro.classList.contains('cenoura_2a')){ // 0!
             canteiro.removeAttribute('class');
-            canteiro.classList.add('seco'); 
-        }else if (canteiro.classList.contains('cenoura_2b')){
+            canteiro.classList.add('seco');
+            contadores[i] = 0;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+        }
+        if (contadores[i] < 3){
+            if (canteiro.classList.contains('cenoura_2b')){ // 3 ->
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('cenoura_2a');                
+                contadores[i]++;
+                console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
+            }
+        }
+
+        if (contadores[i] === 3 && canteiro.classList.contains('cenoura_2b')){ // 0!
             canteiro.removeAttribute('class');
-            canteiro.classList.add('cenoura_3');   
-        }else if (canteiro.classList.contains('cenoura_2a')){
-            canteiro.removeAttribute('class');
-            canteiro.classList.add('seco'); 
+            canteiro.classList.add('cenoura_3');
+            contadores[i] = 0;
+            console.log("Estado Cenoura do canteiro "+i+": "+contadores[i]);
         }
 
         //Semente batata
-        if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantadoRegado')){
-            canteiro.classList.remove('plantado_batata');
-            canteiro.classList.remove('plantadoRegado');
-            canteiro.classList.add('batata_1a');  
-        }else if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantado')){
+        if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantado')){ // 0!
             canteiro.removeAttribute('class');
-            canteiro.classList.add('seco');  
-        }else if (canteiro.classList.contains('batata_1b')){
-            canteiro.classList.remove('batata_1b');
+            canteiro.classList.add('seco');
+            contadores[i] = 0;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+        }
+
+        if (canteiro.classList.contains('plantado_batata') && canteiro.classList.contains('plantadoRegado')){ // +1 ->
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('batata_1a');
+            contadores[i]++;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+        }else if (canteiro.classList.contains('batata_1a')){ // 0!
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('seco');
+            contadores[i] = 0;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+        }
+        if (contadores[i] < 2){
+            if (canteiro.classList.contains('batata_1b')){ // 2 ->
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('batata_1a');                
+                contadores[i]++;
+                console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+            }
+        }
+
+        if (contadores[i] === 2 && canteiro.classList.contains('batata_1b')){ // -> 3
+            canteiro.removeAttribute('class');
             canteiro.classList.add('batata_2a');
-        }else if (canteiro.classList.contains('batata_1a')){
-            canteiro.classList.remove('batata_1a');
+            contadores[i]++;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+        }else if (canteiro.classList.contains('batata_2a')){ // 0!
+            canteiro.removeAttribute('class');
             canteiro.classList.add('seco');
-        }else if (canteiro.classList.contains('batata_2b')){
-            canteiro.classList.remove('batata_2b');
-            canteiro.classList.add('batata_3');   
-        }else if (canteiro.classList.contains('batata_2a')){
-            canteiro.classList.remove('batata_2a');
-            canteiro.classList.add('seco');
+            contadores[i] = 0;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+        }
+        if (contadores[i] < 5){
+            if (canteiro.classList.contains('batata_2b')){ // 5 ->
+                canteiro.removeAttribute('class');
+                canteiro.classList.add('batata_2a');                
+                contadores[i]++;
+                console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
+            }
+        }
+
+        if (contadores[i] === 5 && canteiro.classList.contains('batata_2b')){ // 0!
+            canteiro.removeAttribute('class');
+            canteiro.classList.add('batata_3');
+            contadores[i] = 0;
+            console.log("Estado Batata do canteiro "+i+": "+contadores[i]);
         }
 
         //Semente cebola
@@ -336,26 +402,26 @@ export function passarTempo(){
             canteiro.removeAttribute('class');
             canteiro.classList.add('seco');
             contadores[i] = 0;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }
 
         if (canteiro.classList.contains('plantado_cebola') && canteiro.classList.contains('plantadoRegado')){ // +1 ->
             canteiro.removeAttribute('class');
             canteiro.classList.add('cebola_1a');
             contadores[i]++;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }else if (canteiro.classList.contains('cebola_1a')){ // 0!
             canteiro.removeAttribute('class');
             canteiro.classList.add('seco');
             contadores[i] = 0;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }
         if (contadores[i] < 3){
             if (canteiro.classList.contains('cebola_1b')){ // 3 ->
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_1a');                
                 contadores[i]++;
-                console.log(contadores[i]);
+                console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
             }
         }
 
@@ -363,19 +429,19 @@ export function passarTempo(){
             canteiro.removeAttribute('class');
             canteiro.classList.add('cebola_2a');
             contadores[i]++;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }else if (canteiro.classList.contains('cebola_2a')){ // 0!
             canteiro.removeAttribute('class');
             canteiro.classList.add('seco');
             contadores[i] = 0;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }
         if (contadores[i] < 7){
             if (canteiro.classList.contains('cebola_2b')){ // 7 ->
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_2a');                
                 contadores[i]++;
-                console.log(contadores[i]);
+                console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
             }
         }
 
@@ -383,7 +449,7 @@ export function passarTempo(){
             canteiro.removeAttribute('class');
             canteiro.classList.add('cebola_3');
             contadores[i] = 0;
-            console.log(contadores[i]);
+            console.log("Estado Cebola do canteiro "+i+": "+contadores[i]);
         }
     }
 }
