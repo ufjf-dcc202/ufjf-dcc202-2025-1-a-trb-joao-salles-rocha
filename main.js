@@ -1,6 +1,6 @@
 //Imports
 import { criarJardim } from "./criaJardim.js";
-import { abrirLoja, escolherFerramenta, escolherSemente, passarTempo } from "./interações.js";
+import { comprarSemente, escolherFerramenta, escolherSemente, passarTempo } from "./interações.js";
 
 
 const btnPreparar = document.querySelector("#preparar");
@@ -32,4 +32,4 @@ btnCebola.addEventListener("click", () => escolherSemente("cebola"));
 btnBatata.addEventListener("click", () => escolherSemente("batata"));
 
 btnDormir.addEventListener("click", () => passarTempo());
-btnLoja.addEventListener("click", () => abrirLoja());
+btnLoja.addEventListener("click", () => comprarSemente());

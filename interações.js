@@ -7,6 +7,11 @@ let dia = 1;
 let qntCenoura = 3;
 let qntBatata = 3;
 let qntCebola = 3;
+
+let prcCenoura = 15;
+let prcBatata = 40;
+let prcCebola = 60;
+
 let plantou = 0;
 
 let contadores = new Array(144).fill(0);
@@ -84,11 +89,11 @@ export function escolherSemente(id){
     trocarSemente(id);
     tocarSom("trocarItem");
     if(id === "cenoura")
-        document.getElementById("prcSemente").innerHTML = "Preço da Cenoura: 15";
+        document.getElementById("prcSemente").innerHTML = "Preço da Cenoura: "+prcCenoura;
     else if(id === "batata")
-        document.getElementById("prcSemente").innerHTML = "Preço da Batata: 40";
+        document.getElementById("prcSemente").innerHTML = "Preço da Batata: "+prcBatata;
     else if(id === "cebola")
-        document.getElementById("prcSemente").innerHTML = "Preço da Cebola: 60";
+        document.getElementById("prcSemente").innerHTML = "Preço da Cebola: "+prcCebola;
 }
 
 export function usarFerramenta(num){
@@ -460,8 +465,30 @@ export function passarTempo(){
     }
 }
 
-export function abrirLoja(){
-    tocarSom("interagindo");
+export function comprarSemente(){
+    if (semente === "cenoura" && dinheiro>=prcCenoura){
+        dinheiro-=prcCenoura;
+        qntCenoura++;
+        document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
+        document.getElementById("qntCenoura").innerHTML = qntCenoura;
+        checarCor();
+        tocarSom("interagindo");
+    }else if (semente === "batata" && dinheiro>=prcBatata){
+        dinheiro-=prcBatata;
+        qntBatata++;
+        document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
+        document.getElementById("qntBatata").innerHTML = qntBatata;
+        checarCor();
+        tocarSom("interagindo");
+    }else if (semente === "cebola" && dinheiro>=prcCebola){
+        dinheiro-=prcCebola;
+        qntCebola++;
+        document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
+        document.getElementById("qntCebola").innerHTML = qntCebola;
+        checarCor();
+        tocarSom("interagindo");
+    }else
+        tocarSom("erro");
 }
 
 //Atalhos
