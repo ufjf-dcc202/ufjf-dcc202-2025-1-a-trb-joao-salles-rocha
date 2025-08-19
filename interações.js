@@ -2,6 +2,7 @@ import { tocarSom, pararSom } from "./audio.js";
 let ferramenta = "preparar";
 let semente = "cenoura";
 let dinheiro = 10;
+let dia = 1;
 
 let qntCenoura = 3;
 let qntBatata = 3;
@@ -224,6 +225,7 @@ export function usarFerramenta(num){
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
                 console.log("Cenoura coletada.");
+                document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
                 console.log(dinheiro);
             }else if (canteiro.classList.contains('batata_3')){
                 dinheiro+=40;
@@ -231,6 +233,7 @@ export function usarFerramenta(num){
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
                 console.log("Batata coletada.");
+                document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
                 console.log(dinheiro);
             }else if (canteiro.classList.contains('cebola_3')){
                 dinheiro+=60;
@@ -238,6 +241,7 @@ export function usarFerramenta(num){
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
                 console.log("Cebola coletada.");
+                document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
                 console.log(dinheiro);
             }
             break;
@@ -247,6 +251,8 @@ export function usarFerramenta(num){
 //Interações extras
 export function passarTempo(){
     tocarSom("trocarItem");
+    dia++;
+    document.getElementById("qntDia").innerHTML = "DIA: "+dia;
     for (let i = 0; i < 144; i++){
         let canteiro = document.getElementById("canteiro_"+i);
         
