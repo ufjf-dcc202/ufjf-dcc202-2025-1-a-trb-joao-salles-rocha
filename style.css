@@ -45,16 +45,18 @@
 .qntSemente {
     position: relative;
     top: 0px; /* Possivelmente vou alterar depois */
-    right: 48px; /* Possivelmente vou alterar depois */  
+    right: 51px; /* Possivelmente vou alterar depois */  
     padding: 2px 4px;
 
     color: black;
     font-size: 18px;
     font-weight: bold;
 
-    background-image: url(imagens/slot.png);
-    background-size: 128%;
-    image-rendering: pixelated;
+    background-image: none;
+    background-color: #ffc979;
+
+    border: solid;
+    border-color: #892665;
 }
 
 .estatísticas{
