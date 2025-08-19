@@ -101,20 +101,24 @@ export function usarFerramenta(num){
             if (canteiro.classList.contains('preparado')){
                 canteiro.classList.remove('preparado');
                 canteiro.classList.add('regado');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('plantado')){
                 canteiro.classList.remove('plantado');
                 canteiro.classList.add('plantadoRegado');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }
             //Cenoura
             if(canteiro.classList.contains('cenoura_1a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cenoura_1b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('cenoura_2a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cenoura_2b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }
 
@@ -122,10 +126,12 @@ export function usarFerramenta(num){
             if(canteiro.classList.contains('batata_1a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('batata_1b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('batata_2a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('batata_2b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }
 
@@ -133,10 +139,12 @@ export function usarFerramenta(num){
             if(canteiro.classList.contains('cebola_1a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_1b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }else if(canteiro.classList.contains('cebola_2a')){
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('cebola_2b');
+                tocarSom("regando");
                 console.log("Canteiro regado.");
             }
             break;
@@ -166,7 +174,8 @@ export function usarFerramenta(num){
             if (((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "cenoura" && qntCenoura === 0 )|| 
                 ((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "batata" && qntBatata === 0 )||
                 ((canteiro.classList.contains('preparado') || canteiro.classList.contains('regado')) && semente === "cebola" && qntCebola === 0 )){
-                   console.log("Sem mais sementes. :("); 
+                   console.log("Sem mais sementes. :(");
+                   tocarSom("erro");
             }else if (canteiro.classList.contains('preparado')){
                 canteiro.classList.remove('preparado');
                 canteiro.classList.add('plantado');
