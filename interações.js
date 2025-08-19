@@ -12,6 +12,10 @@ let prcCenoura = 15;
 let prcBatata = 40;
 let prcCebola = 60;
 
+let dinCenoura = 25;
+let dinBatata = 60;
+let dinCebola = 90;
+
 let plantou = 0;
 
 let contadores = new Array(144).fill(0);
@@ -234,7 +238,7 @@ export function usarFerramenta(num){
 
         case ferramenta = "mão":
             if (canteiro.classList.contains('cenoura_3')){
-                dinheiro+=20;
+                dinheiro+=dinCenoura;
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
@@ -242,7 +246,7 @@ export function usarFerramenta(num){
                 document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
                 console.log(dinheiro);
             }else if (canteiro.classList.contains('batata_3')){
-                dinheiro+=40;
+                dinheiro+=dinBatata;
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
@@ -250,7 +254,7 @@ export function usarFerramenta(num){
                 document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
                 console.log(dinheiro);
             }else if (canteiro.classList.contains('cebola_3')){
-                dinheiro+=60;
+                dinheiro+=dinCebola;
                 canteiro.removeAttribute('class');
                 canteiro.classList.add('vazio');
                 tocarSom("plantando");
