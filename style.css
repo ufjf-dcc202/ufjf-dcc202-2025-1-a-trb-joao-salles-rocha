@@ -36,6 +36,12 @@
     justify-content: center;
 }
 
+.opções{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
 .qntSemente {
     position: relative;
     top: 0px; /* Possivelmente vou alterar depois */
@@ -49,6 +55,47 @@
     background-image: url(imagens/slot.png);
     background-size: 128%;
     image-rendering: pixelated;
+}
+
+.estatísticas{
+    background-image: none;
+}
+
+.qntDias{
+    position: relative;
+    bottom: 730px; 
+    right: 0px; 
+    padding: 2px 4px;
+
+    color: black;
+    font-family:monospace;
+    font-size: 24px;
+    font-weight: bold;
+    
+
+    background-image: none;
+    background-color: #ffc979;
+
+    border: solid;
+    border-color: #892665;
+}
+
+.qntDinheiros{
+    position: relative;
+    bottom: 690px; 
+    right: 96px;  
+    padding: 2px 4px;
+
+    color: black;
+    font-family:monospace;
+    font-size: 24px;
+    font-weight: bold;
+
+    background-image: none;
+    background-color: #ffc979;
+
+    border: solid;
+    border-color: #892665;
 }
 
 /* Tipos de canteiro */
@@ -347,4 +394,14 @@
     background-image: url("imagens/cama.png"), url(imagens/slot.png);
     background-size: 100%;
     image-rendering: pixelated; 
+}
+
+/* Loja */
+
+.comprar{
+    width: 80px;
+    height: 80px;
+    background-image: url("imagens/dinheiro.png"), url(imagens/slot.png);
+    background-size: 100%;
+    image-rendering: pixelated;     
 }
