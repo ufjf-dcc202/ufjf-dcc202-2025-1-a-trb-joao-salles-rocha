@@ -47,6 +47,23 @@ function trocarSemente(id){
     semente = id;
 }
 
+function checarCor(){
+    if (qntCenoura === 0)
+        document.getElementById("qntCenoura").style.color = 'red';
+    else
+        document.getElementById("qntCenoura").style.color = 'black';
+
+    if (qntBatata === 0)
+        document.getElementById("qntBatata").style.color = 'red';
+    else
+        document.getElementById("qntBatata").style.color = 'black';
+
+    if (qntCebola === 0)
+        document.getElementById("qntCebola").style.color = 'red';
+    else
+        document.getElementById("qntCebola").style.color = 'black';
+}
+
 export function escolherFerramenta(id){
     const opFerramenta = document.getElementById(id);
     limpaAtivosFerramenta();
@@ -172,16 +189,22 @@ export function usarFerramenta(num){
                 qntCenoura--;
                 plantou = 0;
                 console.log("Cenoura: "+qntCenoura);
+                document.getElementById("qntCenoura").innerHTML = qntCenoura;
+                checarCor();
             }
             if (plantou === 1 && semente === "batata" && qntBatata > 0){
                 qntBatata--;
                 plantou = 0;
                 console.log("Batata: "+qntBatata);
+                document.getElementById("qntBatata").innerHTML = qntBatata;
+                checarCor();
             }
             if (plantou === 1 && semente === "cebola" && qntCebola > 0){
                 qntCebola--;
                 plantou = 0;
                 console.log("Cebola: "+qntCebola);
+                document.getElementById("qntCebola").innerHTML = qntCebola;
+                checarCor();
             }
             break;
 
@@ -323,15 +346,15 @@ function executarAtalhos(){
         console.log('Semente anterior');
         switch(semente){
             case semente = "cenoura":
-               escolherSemente("batata");
+               escolherSemente("cebola");
                 break;
                 
-            case semente = "cebola":
+            case semente = "batata":
                 escolherSemente("cenoura");
                 break;
 
-            case semente = "batata":
-                escolherSemente("cebola");
+            case semente = "cebola":
+                escolherSemente("batata");
                 break;
         }
     }
@@ -340,14 +363,14 @@ function executarAtalhos(){
         console.log('Próxima semente');
         switch(semente){
             case semente = "cenoura":
-                 escolherSemente("cebola");
+                 escolherSemente("batata");
                 break;
                 
-             case semente = "cebola":
-             escolherSemente("batata");
+             case semente = "batata":
+             escolherSemente("cebola");
                 break;
 
-            case semente = "batata":
+            case semente = "cebola":
                 escolherSemente("cenoura");
                 break;              
         }
@@ -357,7 +380,7 @@ function executarAtalhos(){
         console.log('Ferramenta anterior');
         switch(ferramenta){
             case ferramenta = "preparar":
-                escolherFerramenta("plantar");
+                escolherFerramenta("colher");
                 break;
                 
             case ferramenta = "regar":
@@ -371,10 +394,13 @@ function executarAtalhos(){
             case ferramenta = "podar":
                 escolherFerramenta("quebrar");
                 break;
-
             case ferramenta = "plantar":
                 escolherFerramenta("podar");
-                break;                
+                break;
+
+            case ferramenta = "colher":
+                escolherFerramenta("plantar")
+                break;             
         }
     }
 
@@ -398,8 +424,20 @@ function executarAtalhos(){
                 break;
 
             case ferramenta = "plantar":
-                escolherFerramenta("preparar");
-                break;                
+                escolherFerramenta("colher");
+                break;   
+
+            case ferramenta = "colher":
+                escolherFerramenta("preparar")
+                break;             
         }
+    }
+
+    //Para testes
+    if (event.key === 'p'){
+        dinheiro = 999999;
+        qntCenoura = 99;
+        qntBatata = 99;
+        qntCebola = 99;
     }
 }
