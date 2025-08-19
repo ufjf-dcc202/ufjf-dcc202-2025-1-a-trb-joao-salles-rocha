@@ -250,7 +250,7 @@ export function usarFerramenta(num){
 
 //Interações extras
 export function passarTempo(){
-    tocarSom("trocarItem");
+    tocarSom("interagindo");
     dia++;
     document.getElementById("qntDia").innerHTML = "DIA: "+dia;
     for (let i = 0; i < 144; i++){
@@ -351,6 +351,10 @@ export function passarTempo(){
         }
 
     }
+}
+
+export function abrirLoja(){
+    tocarSom("interagindo");
 }
 
 //Atalhos
