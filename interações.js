@@ -455,8 +455,12 @@ function executarAtalhos(){
     //Para testes
     if (event.key === 'p'){
         dinheiro = 999999;
+        document.getElementById("qntDinheiro").innerHTML = "DINHEIRO: "+dinheiro;
         qntCenoura = 99;
+        document.getElementById("qntCenoura").innerHTML = qntCenoura;
         qntBatata = 99;
+        document.getElementById("qntBatata").innerHTML = qntBatata;
         qntCebola = 99;
+        document.getElementById("qntCebola").innerHTML = qntCebola;
     }
 }
